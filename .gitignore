@@ -21,6 +21,7 @@ locale/**/*.js
 .env.development.local
 .env.test.local
 .env.production.local
+.vscode
 
 npm-debug.log*
 yarn-debug.log*
