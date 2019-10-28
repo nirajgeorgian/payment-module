@@ -1,3 +1,5 @@
+import PaymentError from 'errors'
+
 export interface IRefundData {
 	transactionId: string | number
 	amount: number
@@ -32,7 +34,7 @@ abstract class AbstractPayment {
 	abstract refund: (data?: IRefundData) => boolean
 }
 
-export class Payment extends AbstractPayment {
+class Payment extends AbstractPayment {
 	constructor(paymentdata: IPaymentData) {
 		super(paymentdata)
 	}
@@ -66,4 +68,5 @@ export class Payment extends AbstractPayment {
 	}
 }
 
+export { Payment, PaymentError }
 export default Payment
