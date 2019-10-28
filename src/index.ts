@@ -55,6 +55,10 @@ export class Payment extends AbstractPayment {
 		 * For example if 1000$ is the authorization, and the current order in context is for 200$
 		 * you only capture 200$ from the available authorization of 1000$
 		 */
+		if (amount) {
+			return false
+		}
+
 		return false
 	}
 

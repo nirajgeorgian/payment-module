@@ -10,16 +10,17 @@ export interface IPaymentData {
     };
     mode: string;
     paymentData: {
-        token?: 'String';
+        token?: string;
     };
 }
 declare abstract class AbstractPayment {
     private readonly paymentData;
     constructor(paymentData: IPaymentData);
+    getPaymentData: () => IPaymentData;
     abstract create: () => boolean;
     abstract authorize: () => boolean;
     abstract paymentInfo: () => IPaymentData;
-    abstract capture: () => boolean;
+    abstract capture: (amount: number) => boolean;
     abstract refund: (data?: IRefundData) => boolean;
 }
 export declare class Payment extends AbstractPayment {
@@ -27,7 +28,7 @@ export declare class Payment extends AbstractPayment {
     create: () => boolean;
     authorize: () => boolean;
     paymentInfo: () => IPaymentData;
-    capture: () => boolean;
+    capture: (amount: number) => boolean;
     refund: () => boolean;
 }
 export default Payment;

@@ -2,13 +2,18 @@ declare class CreditcardError extends Error {
     code: number;
     constructor(message: string);
 }
-export declare class InvalidCreditCard extends CreditcardError {
+declare class InvalidCreditCard extends CreditcardError {
     constructor(cardType: string);
 }
-export declare class UnacceptedCreditCard extends CreditcardError {
+declare class UnacceptedCreditCard extends CreditcardError {
     constructor(cardType: string);
 }
-export declare class ExpiredCreditCard extends CreditcardError {
+declare class ExpiredCreditCard extends CreditcardError {
     constructor(cardNumber: number, expiryMonth: number, expiryYear: number);
 }
-export {};
+declare const _default: {
+    InvalidCreditCard: typeof InvalidCreditCard;
+    UnacceptedCreditCard: typeof UnacceptedCreditCard;
+    ExpiredCreditCard: typeof ExpiredCreditCard;
+};
+export default _default;
