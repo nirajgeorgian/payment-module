@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`payment-module should extends base Payment and work for payment module creation 1`] = `
+Object {
+  "mode": "stripe",
+  "paymentData": Object {
+    "token": "stripe-dev-token123",
+  },
+}
+`;
+
+exports[`payment-module should implement payment and check for data 1`] = `
+Object {
+  "mode": "stripe",
+  "paymentData": Object {
+    "token": "stripe-dev-token123",
+  },
+}
+`;
+
+exports[`payment-module should should refund data 1`] = `
+Object {
+  "mode": "stripe",
+  "paymentData": Object {
+    "token": "stripe-dev-token123",
+  },
+}
+`;
