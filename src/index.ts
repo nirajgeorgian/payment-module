@@ -50,7 +50,6 @@ export class Payment extends AbstractPayment {
 	}
 
 	capture = (amount: number): boolean => {
-		//for each booking confirmation, capture the amount specified for the order from the charge
 		/**
 		 * For example if 1000$ is the authorization, and the current order in context is for 200$
 		 * you only capture 200$ from the available authorization of 1000$
