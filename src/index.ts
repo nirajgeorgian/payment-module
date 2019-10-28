@@ -1,4 +1,4 @@
-import PaymentError from 'errors'
+import PaymentError from 'errors/index'
 
 export interface IRefundData {
 	transactionId: string | number

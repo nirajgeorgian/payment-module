@@ -1,3 +1,4 @@
+import PaymentError from 'errors/index';
 export interface IRefundData {
     transactionId: string | number;
     amount: number;
@@ -23,7 +24,7 @@ declare abstract class AbstractPayment {
     abstract capture: (amount: number) => boolean;
     abstract refund: (data?: IRefundData) => boolean;
 }
-export declare class Payment extends AbstractPayment {
+declare class Payment extends AbstractPayment {
     constructor(paymentdata: IPaymentData);
     create: () => boolean;
     authorize: () => boolean;
@@ -31,4 +32,5 @@ export declare class Payment extends AbstractPayment {
     capture: (amount: number) => boolean;
     refund: () => boolean;
 }
+export { Payment, PaymentError };
 export default Payment;
