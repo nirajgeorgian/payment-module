@@ -72,5 +72,6 @@
   "bugs": {
     "url": "https://github.com/nirajgeorgian/payment-module/issues"
   },
-  "homepage": "https://github.com/nirajgeorgian/payment-module#readme"
+  "homepage": "https://github.com/nirajgeorgian/payment-module#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
