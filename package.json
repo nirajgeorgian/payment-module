@@ -1,61 +1,76 @@
 {
-	"name": "payment-module",
-	"version": "0.0.2",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "jest --coverage",
-		"test:watch": "jest --coverage --watch",
-		"build": "tsc",
-		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-		"lint": "eslint './src/**/*.{ts,tsx}'",
-		"prepare": "npm run build",
-		"prepublishOnly": "npm test && npm run lint",
-		"preversion": "npm run lint",
-		"version": "npm run format && git add -A src",
-		"postversion": "git push && git push --tags"
-	},
-	"files": [
-		"lib/**/*"
-	],
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged",
-			"pre-push": "npm run test"
-		}
-	},
-	"lint-staged": {
-		"src/**/*.{ts,tsx,js,jsx,json}": [
-			"eslint --fix",
-			"git add"
-		],
-		"src/**/*.{js,jsx,ts,tsx,json,md}": [
-			"prettier --write",
-			"git add"
-		]
-	},
-	"devDependencies": {
-		"@types/jest": "^24.0.19",
-		"@types/node": "^12.7.8",
-		"@typescript-eslint/eslint-plugin": "^2.3.1",
-		"@typescript-eslint/parser": "^2.3.1",
-		"eslint": "^6.5.1",
-		"eslint-config-prettier": "^6.3.0",
-		"eslint-config-react": "^1.1.7",
-		"eslint-config-standard": "^14.1.0",
-		"eslint-plugin-jsdoc": "^15.12.1",
-		"eslint-plugin-node": "^10.0.0",
-		"eslint-plugin-prettier": "^3.1.1",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-standard": "^4.0.1",
-		"husky": "^3.0.9",
-		"jest": "^24.9.0",
-		"lint-staged": "^9.4.2",
-		"prettier": "^1.18.2",
-		"ts-jest": "^24.1.0",
-		"typescript": "^3.6.4"
-	},
-	"keywords": [],
-	"author": "nirajgeorgian <nirajgeorgian@gmail.com> (https://github.com/nirajgeorgian)",
-	"license": "ISC"
+  "name": "payment-module",
+  "version": "0.0.2",
+  "description": "this can be used as a base package which provide abstract method for your payment system and different payment modules can be build on top of this.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx,json}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.7.8",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-jsdoc": "^15.12.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "keywords": [
+    "payment",
+    "payment-module"
+  ],
+  "author": "nirajgeorgian <nirajgeorgian@gmail.com> (https://github.com/nirajgeorgian)",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirajgeorgian/payment-module.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nirajgeorgian/payment-module/issues"
+  },
+  "homepage": "https://github.com/nirajgeorgian/payment-module#readme"
 }
