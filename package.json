@@ -1,6 +1,6 @@
 {
   "name": "payment-module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "> this can be used as a base package which provide abstract method for your payment system and different payment modules can be build on top of this.",
   "main": "index.js",
   "scripts": {
